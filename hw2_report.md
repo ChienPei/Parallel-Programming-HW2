@@ -103,7 +103,7 @@
 
 2. **Load Balancing**：
    - 使用 `nsight systems` 和 `nvtx` 計算每個 thread 的運行時間。
-   ![nvtx](pic/nvtxRangePush.png "nvtx")
+   ![nvtx](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/nvtxRangePush.png?raw=trueg "nvtx")
    - 編寫了 Python 程式碼以解析和視覺化 load balancing 結果。
    - 對於每筆測試資料，我使用 1 個 process 和 12 個 thread。
 
@@ -229,19 +229,19 @@
 #### Pthread Version
 - **Scalability Plots**：
 1. **Fast10 Execution Time and Speedup Profile**  
-   ![Execution Time and Speedup Profile - Fast10](pic/fast10_scale_2a.png)  
+   ![Execution Time and Speedup Profile - Fast10](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/fast10_scale_2a.png?raw=true)  
    - **描述**：此圖展示了 `Fast10` 測試數據的執行時間和速度提升。在低執行緒數下執行時間下降，但在更高的執行緒數下，執行時間波動，這可能與該測試數據的規模較小有關，導致多執行緒的優勢不明顯。
 
 2. **Slow01 Execution Time and Speedup Profile**  
-   ![Execution Time and Speedup Profile - Slow01](pic/slow01_scale_2a.png)  
+   ![Execution Time and Speedup Profile - Slow01](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/slow01_scale_2a.png?raw=true)  
    - **描述**：此圖展示了 `Slow01` 測試數據的執行時間和速度提升曲線。隨著執行緒數量增加，執行時間穩定下降，速度提升曲線表現出持續增長，表明該測試數據的規模適合多執行緒優化。
 
 3. **Slow16 Execution Time and Speedup Profile**  
-   ![Execution Time and Speedup Profile - Slow16](pic/slow16_scale_2a.png)  
+   ![Execution Time and Speedup Profile - Slow16](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/slow16_scale_2a.png?raw=true)  
    - **描述**：`Slow16` 測試數據展示了較為穩定的執行時間下降和速度提升趨勢。隨著執行緒數量的增加，執行時間顯著減少，速度提升曲線呈現接近線性增長，這表明程式在該測試數據下的擴展性非常理想。
 
 4. **Strict34 Execution Time and Speedup Profile**  
-   ![Execution Time and Speedup Profile - Strict34](pic/strict34_scale_2a.png)  
+   ![Execution Time and Speedup Profile - Strict34](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/strict34_scale_2a.png?raw=true)  
    - **描述**：此圖展示了 `Strict34` 測試數據在不同執行緒數量下的執行時間和速度提升。從圖中可以看到，執行時間隨著執行緒數量增加而呈現指數下降趨勢，而速度提升也相應地呈現逐漸增長，反映了程式良好的擴展性。
 
 - **Scalability Analysis**  
@@ -257,19 +257,19 @@
 #### Hybrid Version (MPI + OpenMP)
 - **Scalability Plots**：
 1. **Fast10 Execution Time and Speedup Profile**  
-   ![Fast10 Execution Time and Speedup Profile](pic/fast10_scale_2b.png)  
+   ![Fast10 Execution Time and Speedup Profile](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/fast10_scale_2b.png?raw=true)  
    - **描述**：在 `Fast10` 測試數據中，隨著進程數量增加，執行時間最初有所下降，但在更高進程數量下執行時間波動，這可能是由於數據集較小，平行化開銷超過了效能收益，限制了可擴展性。
 
 2. **Slow01 Execution Time and Speedup Profile**  
-   ![Slow01 Execution Time and Speedup Profile](pic/slow01_scale_2b.png)  
+   ![Slow01 Execution Time and Speedup Profile](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/slow01_scale_2b.png?raw=true)  
    - **描述**：`Slow01` 測試數據隨著進程數量增加，執行時間穩定減少，加速比曲線也相對穩定增長，顯示該數據集適合平行處理。少數波動可能與進程間的通信開銷有關。
 
 3. **Slow16 Execution Time and Speedup Profile**  
-   ![Slow16 Execution Time and Speedup Profile](pic/slow16_scale_2b.png)  
+   ![Slow16 Execution Time and Speedup Profile](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/slow16_scale_2b.png?raw=true)  
    - **描述**：`Slow16` 測試數據顯示出隨著進程增加，執行時間持續下降，加速比接近線性增長，表現出優秀的可擴展性。數據集較大，讓進程間的任務分配更有效，減少了同步開銷。
 
 4. **Strict34 Execution Time and Speedup Profile**  
-   ![Strict34 Execution Time and Speedup Profile](pic/strict34_scale_2b.png)  
+   ![Strict34 Execution Time and Speedup Profile](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/strict34_scale_2b.png?raw=true)  
    - **描述**：`Strict34` 測試數據作為大型測試案例，顯示隨著進程數量增加，執行時間顯著下降，加速比穩定上升。數據規模大，能夠充分利用 MPI 和 OpenMP，達到接近線性的加速效果，反映出高可擴展性。
 
 - **Scalability Analysis**：  
@@ -287,7 +287,7 @@
 - **Analysis**：討論負載平衡的效果，並指出特定配置下的平衡性差異。
 
 #### Pthread Version
-![Load Balancing: Pthread Version](pic/Load_Balancing_Pthread_Version.png)
+![Load Balancing: Pthread Version](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/Load_Balancing_Pthread_Version.png?raw=true)
   1. **Fast10**  
      - **描述**：在 `Fast10` 測試數據下，各執行緒的總運行時間差異較大，特別是部分執行緒（例如 Thread 6 和 Thread 9）有較高的負載。這可能是由於 `Fast10` 的計算量較少，導致負載在不同執行緒之間分配不均，影響了整體的平衡性。
   2. **Slow01**  
@@ -298,7 +298,7 @@
      - **描述**：`Strict34` 是一組大型測試數據，圖表顯示所有執行緒的總運行時間非常接近，負載分配幾乎完全均勻，顯示出非常理想的負載平衡效果。在大規模數據下，多執行緒的分配效率顯著提升。
 
 - **Load Balancing Comparison across Different Tests**  
-  - ![Load Balancing Comparison](pic/Load_Balancing_Pthread_Version_comparison.png)
+  - ![Load Balancing Comparison](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/Load_Balancing_Pthread_Version_comparison.png?raw=true)
   - **描述**：該圖展示了四組測試數據（Fast10、Slow01、Slow16 和 Strict34）在相同執行緒配置下的負載平衡情況。可以觀察到，隨著測試數據規模的增加，各執行緒之間的負載逐漸趨於均衡，特別是在 `Strict34` 上負載平衡效果最佳，而在 `Fast10` 上負載波動較大，顯示出小型數據集在負載分配方面的挑戰。
 
 - **Analysis**  
@@ -306,7 +306,7 @@
 
 #### Hybrid Version (MPI + OpenMP)
 ### 2.2.2 Load Balancing (Hybrid Version - MPI + OpenMP)
-![Load Balancing: Hybrid Version (MPI + OpenMP)](pic/Load_Balancing_rank_Version.png)
+![Load Balancing: Hybrid Version (MPI + OpenMP)](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/Load_Balancing_rank_Version.png?raw=true)
   1. **Fast10 Load Balancing**  
      - **描述**：在 `Fast10` 測試數據下，各 Rank 的執行時間分布較為均勻，但隨著 Rank ID 的增加，執行時間略微下降。這可能是因為 `Fast10` 的計算量較小，進程之間的負載分配在小數據集上更容易達成平衡。
   2. **Slow01 Load Balancing**  
@@ -317,7 +317,7 @@
      - **描述**：在 `Strict34` 測試數據中，各 Rank 的負載非常均勻，顯示了非常理想的負載平衡效果。這反映了在大規模數據下，Hybrid 版本的 MPI + OpenMP 能夠充分發揮進程間協同的優勢，使得進程負載更均衡。
 
 - **Load Balancing Comparison across Ranks**  
-  - ![Load Balancing Comparison across Ranks](pic/Load_Balancing_rank_Version_comparison.png)
+  - ![Load Balancing Comparison across Ranks](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/Load_Balancing_rank_Version_comparison.png?raw=true)
   - **描述**：該圖展示了四組測試數據（Fast10、Slow01、Slow16 和 Strict34）在相同進程配置下的負載平衡情況。隨著測試數據規模的增加，各進程之間的負載逐漸趨於均衡，特別是在 `Strict34` 上負載平衡效果最佳，而在 `Fast10` 上負載波動較大，顯示出小型數據集在負載分配方面的挑戰。
 
 - **Analysis**  
@@ -325,9 +325,9 @@
 
 ### 2.2.3 Hotspots Analysis
 #### Pthread Version
-![2a-vtune](pic/2a-01.jpg)
-![2a-vtune](pic/2a-02.jpg)
-![2a-vtune](pic/2a-03.jpg)
+![2a-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2a-01.jpg?raw=true)
+![2a-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2a-02.jpg?raw=true)
+![2a-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2a-03.jpg?raw=true)
 1. **Top Hotspots 分析**
    - 從熱點分析圖可以看到，`mandelbrot_simd` 函數是 Pthread 版本的主要運算瓶頸，佔據了 43.6% 的 CPU 時間。這一部分主要處理每個像素的計算，利用 SIMD 指令加速了多像素的並行處理。
    - 其他高消耗的指令包括 `_Z13_mm512_mul_pdDv8_dS_` (21.0%) 和 `_mm512_kand` (14.9%)，它們負責處理複數計算和像素篩選，分別使用了 AVX-512 的向量操作。
@@ -342,9 +342,9 @@
 
 
 #### Hybrid Version (MPI + OpenMP)
-![2b-vtune](pic/2b-01.jpg)
-![2b-vtune](pic/2b-02.jpg)
-![2b-vtune](pic/2b-03.jpg)
+![2b-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2b-01.jpg?raw=true)
+![2b-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2b-02.jpg?raw=true)
+![2b-vtune](https://github.com/ChienPei/Parallel-Programming-HW2/blob/main/pic/2b-03.jpg?raw=true)
 1. **Top Hotspots 分析**
    - 在 Hybrid 版本中，`mandelbrot_avx512` 函數佔據了 94.9% 的 CPU 時間，表明該函數在 Hybrid 版本中的運算佔比更高。這是因為此函數同時被多個 MPI 進程和 OpenMP 執行緒使用。
    - 其他較高消耗的函數如 `func@0x1cc44` 和 `orte_ess_base_proc_binding`，這些函數主要負責 OpenMP 和 MPI 的內部管理和進程綁定，佔比相對較小。
